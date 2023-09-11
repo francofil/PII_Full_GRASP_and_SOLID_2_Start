@@ -27,6 +27,10 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
             ConsolePrinter console = new ConsolePrinter();
             console.ImprimirReceta(recipe);
+        /*
+        Utlizamos el principio SRP al separar la responsabilidad de imprimir la receta en esta clase por separado, sacandole
+        la responsabilidad de imprimirse a si misma a la receta
+        */
         }
 
         private static void PopulateCatalogs()
